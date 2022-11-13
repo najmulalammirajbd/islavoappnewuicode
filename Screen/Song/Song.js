@@ -1,8 +1,14 @@
 import { View, Text } from "react-native";
 import MusicPlayer from "../../components/Music/MusicPlayer";
 import { useEffect, useState } from "react";
+import {checkConnected} from '../../NoInternet/functions';
+import NoConnectionScreen from "../../NoInternet/NoConnectionScreen";
 
 export default function Song() {
+  const [connectStatus,setConnectStatus] = useState(false)
+  checkConnected().then(res=>{
+    setConnectStatus(res)
+  })
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   console.log(data);
@@ -14,9 +20,12 @@ export default function Song() {
       .finally(() => setLoading(false));
   }, []);
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      {isLoading ? <Text>loading...</Text> : <MusicPlayer songs={data} />}
-    </View>
+    connectStatus?
+    (<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    {isLoading ? <Text>loading...</Text> : <MusicPlayer songs={data} />}
+  </View>):(
+        <NoConnectionScreen onCheck={checkConnected}/>
+      )
   );
 }
 

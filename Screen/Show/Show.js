@@ -3,8 +3,14 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import HeaderTwo from "../HeaderTwo/HeaderTwo";
 import MusicPlayer from "../../components/Music/MusicPlayer";
 import { useEffect, useState } from "react";
+import {checkConnected} from '../../NoInternet/functions';
+import NoConnectionScreen from "../../NoInternet/NoConnectionScreen";
 
 export default function Show() {
+  const [connectStatus,setConnectStatus] = useState(false)
+  checkConnected().then(res=>{
+    setConnectStatus(res)
+  })
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   console.log(data);
@@ -17,9 +23,12 @@ export default function Show() {
   }, []);
 
   return (
-    <View style={{ flex: 1 }}>
+    connectStatus?
+    (<View style={{ flex: 1 }}>
       {isLoading ? <Text>Loading.......</Text> : <MusicPlayer songs={data} />}
-    </View>
+    </View>):(
+        <NoConnectionScreen onCheck={checkConnected}/>
+      )
   );
 }
 
