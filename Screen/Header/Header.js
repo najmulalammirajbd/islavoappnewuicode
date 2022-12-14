@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
     marginTop:10
   },
   logo:{
-    width:85,
-    height:60,
+    width:120,
+    height:80,
     alignItems:'flex-start',
-    marginBottom:0,
+    marginBottom:10,
     resizeMode:'contain'
   }
 });

@@ -27,7 +27,7 @@ export default function About() {
           marginTop: 10,
         }}
       >
-        The islavo is islamic audio music and islamic audio musical show
+        the islavo is islamic audio music and islamic audio musical show
         streaming app. where you can listen to islamic music and musical show
         freely. islavo officially launched on 19 may 2021. islavo mainly works
         with islamic musics and islamic musical shows. islavo's slogan is

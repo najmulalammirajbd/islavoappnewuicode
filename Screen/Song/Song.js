@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text , Image } from "react-native";
 import MusicPlayer from "../../components/Music/MusicPlayer";
 import { useEffect, useState } from "react";
 import {checkConnected} from '../../NoInternet/functions';
@@ -22,7 +22,7 @@ export default function Song() {
   return (
     connectStatus?
     (<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-    {isLoading ? <Text>loading...</Text> : <MusicPlayer songs={data} />}
+    {isLoading ? <Image style={{height:120, width:150}} source={require('../../assets/appicon.png')} /> : <MusicPlayer songs={data} />}
   </View>):(
         <NoConnectionScreen onCheck={checkConnected}/>
       )
