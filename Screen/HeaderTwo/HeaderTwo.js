@@ -11,10 +11,6 @@ export default function Headirtwo({backBtn}) {
           <AntDesign name="leftcircle" size={24} color="white" />
          </Pressable>
       )}
-      <Image
-        style={styles.logo}
-        source={require('../../assets/appicon.png')}
-      />
     </View>
   );
 }
@@ -23,7 +19,8 @@ const styles = StyleSheet.create({
   container: {
     justifyContent:'center',
     flexDirection:'row',
-    alignItems:'center'
+    alignItems:'center' ,
+    marginTop: 6
   },
   logo: {
     width:110,

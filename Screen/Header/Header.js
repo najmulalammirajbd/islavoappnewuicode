@@ -20,17 +20,16 @@ export default function Header({backBtn}) {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomWidth:0.3,
-    borderBottomColor:'white',
     flexDirection:'row',
     alignItems:'center',
-    marginTop:10
+    marginTop:10,
   },
   logo:{
     width:120,
-    height:80,
+    height:40,
     alignItems:'flex-start',
-    marginBottom:10,
-    resizeMode:'contain'
+    marginBottom:0,
+    resizeMode:'contain',
+    marginBottom: 10
   }
 });
