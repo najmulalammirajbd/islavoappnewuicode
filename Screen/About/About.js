@@ -71,7 +71,7 @@ export default function About() {
       >
         email: islavo.info@gmail.com
       </Text>
-      <Text
+      {/* <Text
         style={{
           color: "white",
           fontSize: 12,
@@ -82,7 +82,7 @@ export default function About() {
       >
         {" "}
         privacy policy for islavo{" "}
-      </Text>
+      </Text> */}
       <Text
         style={{
           color: "white",
