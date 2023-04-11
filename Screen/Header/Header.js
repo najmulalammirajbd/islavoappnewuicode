@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
     marginTop:10,
   },
   logo:{
-    width:120,
+    width:100,
     height:40,
     alignItems:'flex-start',
     marginBottom:0,
     resizeMode:'contain',
-    marginBottom: 10
+    marginBottom: 0
   }
 });

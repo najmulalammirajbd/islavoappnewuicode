@@ -1,5 +1,5 @@
 import { StyleSheet, Image , View, Pressable } from 'react-native';
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign , Ionicons } from '@expo/vector-icons'; 
 import {useNavigation} from '@react-navigation/native';
 
 export default function Headirtwo({backBtn}) {
@@ -8,7 +8,7 @@ export default function Headirtwo({backBtn}) {
     <View style={styles.container}>
       { backBtn && (
          <Pressable onPress={()=> {navigation.goBack()}}>
-          <AntDesign name="leftcircle" size={24} color="white" />
+          <Ionicons name="ios-chevron-back" size={24} color="white" />
          </Pressable>
       )}
     </View>
