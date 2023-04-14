@@ -24,11 +24,16 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package" : "com.islavo",
-      "versionCode":35
+      "package": "com.islavo",
+      "versionCode": 36
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e149a7e-201d-40c9-bc6c-fa92e24d1980"
+      }
     }
   }
 }
