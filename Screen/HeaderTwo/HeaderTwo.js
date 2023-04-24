@@ -8,7 +8,7 @@ export default function Headirtwo({backBtn}) {
     <View style={styles.container}>
       { backBtn && (
          <Pressable onPress={()=> {navigation.goBack()}}>
-          <Ionicons name="ios-chevron-back" size={24} color="white" />
+          <Ionicons name="ios-caret-back" size={24} color="white" />
          </Pressable>
       )}
     </View>
